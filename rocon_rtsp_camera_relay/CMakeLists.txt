@@ -7,6 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   std_msgs
   sensor_msgs
+  camera_info_manager
 )
 
 find_package(OpenCV)
