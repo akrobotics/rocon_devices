@@ -63,9 +63,6 @@ void RoconRtspCameraRelay::convertCvToRosImg(const cv::Mat& mat, sensor_msgs::Im
   }
   ci = cinfo_->getCameraInfo();
   ci.header = ros_img.header;
-  /*ci.header = ros_img.header;
-  ci.width = ros_img.width;
-  ci.height = ros_img.height; */
   
   return;
 }
