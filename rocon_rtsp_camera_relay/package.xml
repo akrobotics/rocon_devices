@@ -15,11 +15,14 @@
   <build_depend>image_transport</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
+  <build_depend>camera_info_manager</build_depend>
+
   <run_depend>roscpp</run_depend>
   <run_depend>cv_bridge</run_depend>
   <run_depend>image_transport</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>std_msgs</run_depend>
+  <run_depend>camera_info_manager</run_depend>
 
   <export>
     <rocon_app>rapps/image_stream/image_stream.rapp</rocon_app>
