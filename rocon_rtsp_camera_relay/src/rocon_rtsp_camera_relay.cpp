@@ -13,6 +13,7 @@ RoconRtspCameraRelay::RoconRtspCameraRelay(ros::NodeHandle& n) : nh_(n)
   pub_video_ = it.advertise("image", 1);
   pub_camera_info_ = nh_.advertise<sensor_msgs::CameraInfo>("camera_info", 1);
   pub_status_ = nh_.advertise<std_msgs::String>("status", 1);
+  nh_.param<std::string>("frame_id", camera_frame_, "");
 }
 
 RoconRtspCameraRelay::~RoconRtspCameraRelay()
@@ -51,6 +52,7 @@ void RoconRtspCameraRelay::convertCvToRosImg(const cv::Mat& mat, sensor_msgs::Im
   cv_img.image = mat;
   cv_img.toImageMsg(ros_img);
   ros_img.header.stamp = ros::Time::now();
+  ros_img.header.frame_id = camera_frame_;
   // check for default camera info
   if (!cinfo_->isCalibrated())
   {

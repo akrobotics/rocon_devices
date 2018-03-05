@@ -38,6 +38,7 @@ class RoconRtspCameraRelay {
     std::string                     status_;
     std::string                     camera_info_url_;
     std::string                     camera_name_;
+    std::string                     camera_frame_;
 
     image_transport::Publisher pub_video_;
     ros::Publisher pub_camera_info_;
