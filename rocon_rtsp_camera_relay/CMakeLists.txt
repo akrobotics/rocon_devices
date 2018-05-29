@@ -10,7 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   camera_info_manager
 )
 
-find_package(OpenCV 2.4.8 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS include
